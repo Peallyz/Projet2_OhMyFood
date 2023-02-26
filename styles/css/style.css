@@ -149,6 +149,7 @@ header a:hover i {
 .restaurants .restaurant__card {
   align-self: center;
   width: 100%;
+  min-width: 360px;
   background: white;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -213,6 +214,14 @@ header a:hover i {
   }
   .restaurants .restaurant__card {
     align-self: baseline;
+  }
+}
+@media screen and (max-width: 400px) {
+  .restaurants {
+    padding: 0px;
+  }
+  .restaurants h2 {
+    padding-left: 15px;
   }
 }
 
