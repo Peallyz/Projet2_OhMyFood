@@ -1,0 +1,30 @@
+footer {
+    background-color: #353535ff;
+    padding: 20px;
+    color: #f1f1f1;
+    h4 {
+        font-family: "Shrikhand", "Times New Roman", Times, serif;
+        font-size: 2em;
+        font-weight: 300;
+        margin: 0;
+    }
+    ul {
+        margin-top: 10px;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        i {
+            width: 10px;
+            margin-right: 5px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
