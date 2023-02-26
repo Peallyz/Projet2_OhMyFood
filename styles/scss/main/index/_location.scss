@@ -1,0 +1,51 @@
+.location {
+    form {
+        height: 50px;
+        background: #eaeaea;
+        color: #353535;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input {
+            color: #353535;
+            background: inherit;
+            outline: none;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            width: 180px;
+            text-align: center;
+        }
+        i {
+            font-size: 1.6rem;
+            color: #353535;
+            margin-left: 20px;
+        }
+    }
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #f7f7f7;
+        padding: 0 30px;
+        text-align: center;
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 2rem;
+
+            color: #4d4d4d;
+            font-weight: 300;
+        }
+        button {
+            margin: 30px 0 50px 0;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        width: 100%;
+    }
+}
