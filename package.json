@@ -1,0 +1,11 @@
+{
+    "name": "projet2_ohmyfood",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass -w ./styles/scss/style.scss:./styles/css/style.css"
+    },
+    "author": "Peally",
+    "license": "ISC"
+}
