@@ -1,0 +1,11 @@
+@import "./location";
+@import "./fonctionnement";
+@import "./restaurant";
+
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
