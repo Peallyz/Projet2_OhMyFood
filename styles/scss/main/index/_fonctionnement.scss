@@ -1,0 +1,61 @@
+.fonctionnement {
+    padding: 15px;
+
+    .step {
+        background: #f7f7f7;
+        margin: 0 0 30px 20px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px 2px rgba(#000000, $alpha: 0.15);
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        font-size: 1.5rem;
+        &:hover {
+            background: #f5edff;
+            i {
+                color: $primary;
+            }
+        }
+        i {
+            transition: all 0.2s ease;
+            text-align: center;
+            font-size: 2rem;
+            width: 20px;
+            margin-right: 10px;
+            color: #7e7e7e;
+        }
+        &:after {
+            content: "";
+            color: white;
+            background: $primary;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 22px;
+            font-size: 1.2rem;
+        }
+    }
+    .step1:after {
+        content: "1";
+    }
+    .step2:after {
+        content: "2";
+    }
+    .step3:after {
+        content: "3";
+    }
+    @media screen and (min-width: 900px) {
+        width: 30%;
+        border-right: 2px solid $primary;
+        border-top: 2px solid $primary;
+        max-width: 400px;
+    }
+}
