@@ -3,22 +3,26 @@
 @import "./main/main";
 @import "./footer/footer";
 
-$primary: #9356dc;
-$secondary: #ff79da;
-$tertiary: #99e2d0;
-
-body {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+body,
 html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 62.5%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
 }
