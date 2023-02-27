@@ -1,0 +1,16 @@
+main{
+    .heart {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 15px;
+    fill: white;
+    stroke-width: 20px;
+    stroke: black;
+    transition: fill 0.2s ease;
+    cursor: pointer;
+    :hover {
+        fill: $primary;
+        stroke: $primary;
+    }
+}
+}

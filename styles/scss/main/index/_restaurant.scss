@@ -45,22 +45,8 @@
                     font-weight: 200px;
                 }
             }
-            svg {
-                width: 2rem;
-                margin-right: 15px;
-                fill: white;
-                stroke-width: 20px;
-                stroke: black;
-                transition: fill 0.2s ease;
-
-                :hover {
-                    fill: $primary;
-                    stroke: $primary;
-                }
-            }
         }
     }
-
     .restaurant__card--1 {
         img {
             transform: translateY(-55px);
