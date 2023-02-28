@@ -78,9 +78,9 @@ header a:hover i {
 .fonctionnement .step {
   background: #f7f7f7;
   margin: 0 0 30px 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.15);
-  height: 50px;
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 0 30px;
@@ -90,7 +90,7 @@ header a:hover i {
   font-size: 1.5rem;
 }
 .fonctionnement .step:hover {
-  background: #f5edff;
+  background: #efe3ff;
 }
 .fonctionnement .step:hover i {
   color: #9356dc;
@@ -181,6 +181,26 @@ header a:hover i {
   font-size: 1.5rem;
   font-weight: 200px;
 }
+.restaurants .restaurant__card--new {
+  position: relative;
+}
+.restaurants .restaurant__card--new::after {
+  content: "Nouveau";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #99e2d0;
+  color: #278870;
+  height: 35px;
+  padding: 0 15px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  width: fit-content;
+  border-radius: 3px;
+}
 .restaurants .restaurant__card--1 img {
   transform: translateY(-55px);
 }
@@ -242,9 +262,13 @@ main .heart {
   transition: fill 0.2s ease;
   cursor: pointer;
 }
-main .heart :hover {
+main .heart:hover {
   fill: #9356dc;
   stroke: #9356dc;
+}
+
+.page .heart {
+  fill: #f7f7f7;
 }
 
 .page {
@@ -253,12 +277,29 @@ main .heart :hover {
 .page .thumbnail img {
   width: 100%;
 }
+@media screen and (min-width: 980px) {
+  .page .thumbnail img {
+    max-width: 800px;
+    border-radius: 20px;
+    border: 5px dotted #99e2d0;
+  }
+}
 .page .title {
   width: 100%;
 }
 .page .entree, .page .plats, .page .dessert {
   width: 30%;
   min-width: 360px;
+}
+@media screen and (min-width: 980px) {
+  .page {
+    flex-wrap: nowrap;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    margin: auto;
+  }
 }
 .page .carte {
   display: flex;
@@ -276,6 +317,15 @@ main .heart :hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 980px) {
+  .page .carte {
+    flex-direction: column;
+    bottom: 0;
+    min-width: 500px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }
 .page .carte h2 {
@@ -305,14 +355,11 @@ main .heart :hover {
 }
 .page .carte .card {
   width: 100%;
-  background: white;
-  border-radius: 10px;
   padding: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  height: 100%;
   cursor: pointer;
 }
 .page .carte .card h3 {
@@ -332,6 +379,33 @@ main .heart :hover {
 .page .carte .card .details p:last-of-type {
   font-weight: 700;
   margin-right: 10px;
+}
+.page .carte .container__card {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  height: 50px;
+}
+.page .carte .container__card:hover::after {
+  transform: translateX(0);
+}
+.page .carte .container__card::after {
+  transition: transform 0.3s ease-in-out;
+  content: "V";
+  position: relative;
+  height: 50px;
+  aspect-ratio: 1/1;
+  background: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  transform: translateX(60px);
 }
 .page button {
   min-width: 180px;
