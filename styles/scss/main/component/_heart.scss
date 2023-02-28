@@ -8,9 +8,15 @@ main{
     stroke: black;
     transition: fill 0.2s ease;
     cursor: pointer;
-    :hover {
-        fill: $primary;
-        stroke: $primary;
+        &:hover {
+            fill: $primary;
+            stroke: $primary;
+        }
     }
 }
+
+.page{
+    .heart{
+        fill: #f7f7f7;
+    }
 }
