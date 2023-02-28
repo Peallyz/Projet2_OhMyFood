@@ -1,0 +1,19 @@
+@for $i from 1 through 4 {
+    .container__card--#{$i} {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: apparition 1s ease-out forwards;
+        animation-delay: 0.2s * $i;
+    }
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
