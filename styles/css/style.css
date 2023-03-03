@@ -267,6 +267,13 @@ main .heart:hover {
   fill: #9356dc;
   stroke: #9356dc;
 }
+main #heart {
+  display: none;
+}
+main #heart:checked + label > .heart {
+  fill: #9356dc;
+  stroke: #9356dc;
+}
 
 .page .heart {
   fill: #f7f7f7;
