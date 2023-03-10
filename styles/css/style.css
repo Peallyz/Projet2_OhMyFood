@@ -29,6 +29,9 @@ header a:hover i {
   justify-content: center;
   align-items: center;
 }
+.location form label {
+  display: none;
+}
 .location form input {
   color: #353535;
   background: inherit;
@@ -179,7 +182,7 @@ header a:hover i {
 }
 .restaurants .restaurant__card .content .text p {
   font-size: 1.5rem;
-  font-weight: 200px;
+  font-weight: 300;
 }
 .restaurants .restaurant__card--new {
   position: relative;
@@ -254,7 +257,7 @@ button {
 }
 
 main .heart {
-  width: 2rem;
+  width: 2.1rem;
   height: 2rem;
   margin-right: 15px;
   fill: white;
@@ -351,17 +354,20 @@ main #heart:checked + label > .heart {
     transform: translateY(0px);
   }
 }
-.page {
-  background: #f7f7f7;
+.page .thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .page .thumbnail img {
   width: 100%;
 }
 @media screen and (min-width: 980px) {
   .page .thumbnail img {
-    max-width: 800px;
+    max-width: 700px;
     border-radius: 20px;
-    border: 5px dotted #99e2d0;
+    border: 5px solid #9356dc;
   }
 }
 .page .title {
@@ -478,6 +484,10 @@ main #heart:checked + label > .heart {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #353535;
   padding: 20px;
   color: #f1f1f1;
@@ -505,6 +515,18 @@ footer li i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer nav,
+footer h4 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer nav,
+footer h4 {
+    width: 100%;
   }
 }
 
