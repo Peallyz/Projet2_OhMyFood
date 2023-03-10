@@ -1,104 +1,104 @@
 .restaurants {
-    background: #f7f7f7;
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 1000px;
+  background: #f7f7f7;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 1000px;
 
-    h2 {
+  h2 {
+    width: 100%;
+  }
+  .restaurant__card {
+    align-self: center;
+    width: 100%;
+    min-width: 360px;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    max-width: 400px;
+    overflow: hidden;
+    box-shadow: 1px 2px 5px 2px rgba(#000000, $alpha: 0.1);
+    .img {
+      overflow: hidden;
+      width: 100%;
+      height: 180px;
+      img {
         width: 100%;
+        object-fit: cover;
+      }
     }
+    .content {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 10px;
+      .text {
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .restaurant__card--new {
+    position: relative;
+    &::after {
+      content: "Nouveau";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $tertiary;
+      color: darken($tertiary, 40%);
+      height: 35px;
+      padding: 0 15px;
+      font-size: 1.7rem;
+      font-weight: 500;
+      width: fit-content;
+      border-radius: 3px;
+    }
+  }
+  .restaurant__card--1 {
+    img {
+      transform: translateY(-55px);
+    }
+  }
+  .restaurant__card--2 {
+    img {
+      transform: translateY(-190px);
+    }
+  }
+  .restaurant__card--3 {
+    img {
+      transform: translateY(-65px);
+    }
+  }
+  .restaurant__card--4 {
+    img {
+      transform: translateY(-80px);
+    }
+  }
+  @media screen and (min-width: 900px) {
     .restaurant__card {
-        align-self: center;
-        width: 100%;
-        min-width: 360px;
-        background: white;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        max-width: 400px;
-        overflow: hidden;
-        box-shadow: 1px 2px 5px 2px rgba(#000000, $alpha: 0.1);
-        .img {
-            overflow: hidden;
-            width: 100%;
-            height: 180px;
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-        .content {
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 10px;
-            .text {
-                h3 {
-                    font-size: 1.8rem;
-                    margin-bottom: 5px;
-                }
-                p {
-                    font-size: 1.5rem;
-                    font-weight: 200px;
-                }
-            }
-        }
+      align-self: baseline;
     }
-    .restaurant__card--new{
-        position: relative;
-                &::after{
-                    content: "Nouveau";
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    top: 15px;
-                    right: 15px;
-                    background: $tertiary;
-                    color: darken($tertiary, 40%);
-                    height: 35px;
-                    padding: 0 15px;
-                    font-size: 1.7rem;
-                    font-weight: 500;
-                    width: fit-content;
-                    border-radius: 3px;
-        }
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 2px solid $primary;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0px;
+    h2 {
+      padding-left: 15px;
     }
-    .restaurant__card--1 {
-        img {
-            transform: translateY(-55px);
-        }
-    }
-    .restaurant__card--2 {
-        img {
-            transform: translateY(-190px);
-        }
-    }
-    .restaurant__card--3 {
-        img {
-            transform: translateY(-65px);
-        }
-    }
-    .restaurant__card--4 {
-        img {
-            transform: translateY(-80px);
-        }
-    }
-    @media screen and (min-width: 900px) {
-        .restaurant__card {
-            align-self: baseline;
-        }
-        width: 70%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        border-top: 2px solid $primary;
-    }
-    @media screen and (max-width: 400px) {
-        padding: 0px;
-        h2 {
-            padding-left: 15px;
-        }
-    }
+  }
 }
