@@ -354,6 +354,50 @@ main #heart:checked + label > .heart {
     transform: translateY(0px);
   }
 }
+.loading {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  animation: 1s 3s linear disappear forwards;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+}
+.loading .loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 6px solid #9356dc;
+  border-left: 6px solid transparent;
+  border-bottom: 6px solid #9356dc;
+  border-right: 6px solid transparent;
+  animation: 1s ease-in-out rotation;
+  animation-iteration-count: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .page .thumbnail {
   display: flex;
   justify-content: center;
