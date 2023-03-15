@@ -254,32 +254,42 @@ button {
   box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(0turn, #a16be0, #ff93e1);
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 main .heart {
   width: 2.1rem;
   height: 2rem;
   margin-right: 15px;
-  fill: white;
+  fill: url(#gradientFill);
+  fill-opacity: 0;
   stroke-width: 20px;
   stroke: black;
-  transition: fill 0.2s ease;
   cursor: pointer;
+  position: relative;
+  transition: fill-opacity 0.4s ease;
+  -webkit-transition: fill-opacity 0.4s ease;
+  -moz-transition: fill-opacity 0.4s ease;
+  -o-transition: fill-opacity 0.4s ease;
 }
 main .heart:hover {
-  fill: #9356dc;
+  fill-opacity: 1;
   stroke: #9356dc;
 }
 main #heart {
   display: none;
 }
 main #heart:checked + label > .heart {
-  fill: #9356dc;
+  fill-opacity: 1;
   stroke: #9356dc;
 }
 
 .page .heart {
-  fill: #f7f7f7;
+  fill: url(#gradientFill);
 }
 
 .container__card .validation {
@@ -356,14 +366,15 @@ main #heart:checked + label > .heart {
 }
 .loading {
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   animation: 1s 3s linear disappear forwards;
   opacity: 1;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
 }
 .loading .loader {
   width: 100px;
@@ -376,10 +387,9 @@ main #heart:checked + label > .heart {
   animation: 1s ease-in-out rotation;
   animation-iteration-count: 4;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 45%;
   transform-origin: center;
-  transform: translate(-50%, -50%);
 }
 
 @keyframes disappear {
@@ -586,6 +596,10 @@ body,
 html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 62.5%;
+}
+
+body {
+  position: relative;
 }
 
 a {
