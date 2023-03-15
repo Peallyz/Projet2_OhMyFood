@@ -365,8 +365,8 @@ main #heart:checked + label > .heart {
   }
 }
 .loading {
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
   width: 100vw;
   animation: 1s 3s linear disappear forwards;
   opacity: 1;
@@ -387,8 +387,9 @@ main #heart:checked + label > .heart {
   animation: 1s ease-in-out rotation;
   animation-iteration-count: 4;
   position: absolute;
-  top: 30%;
-  left: 45%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
   transform-origin: center;
 }
 
@@ -402,10 +403,10 @@ main #heart:checked + label > .heart {
 }
 @keyframes rotation {
   from {
-    transform: rotate(0);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 .page .thumbnail {
